@@ -1,0 +1,67 @@
+데이터베이스 테이블 설계 시
+자바의 object 동시에 설계하는 것이 좋다.
+WAS를 통해서 데이터가 들어온다.
+제약조건의 이름은 명시해야 한다.
+테이블 설계 시 분석단계에서 논리를 정의.
+개발자가 설계할 때는 물리적 설계 
+----------------------------------------------
+/*주말 과제*/
+Jdbc 연결
+Create
+Alter
+Insert
+Select
+사용해서 어플리케이션 만들기
+------------------------
+/*cmd창에서*/
+-----------------------------------------------
+sqlplus / as sysdba : 시스템 권한으로 들어간다.
+ed adduser
+/*파일에 추가하기
+create user javabook identified by test00 default tablespace users;
+grant resource, connect, create view to javabook;
+*/
+@adduser
+exit
+
+//user로 로그인하기
+sqlplus
+user-name : javabook
+password : test00
+
+conn javabook/test00    //연결상태 확인
+show user
+select * from tab; // 사전테이블. 안만들었지만 기본적으로 제공해줌
+
+drop table 테이블이름;
+purge recyclebin;  //휴지통을 비운다.(drop한 테이블이 들어가 있음)
+col tname format a10; //table 보기좋게 만들기
+ed sawon //txt 파일 편집
+sql문 삽입 후 저장 닫기
+@테이블명 => Commit complete.
+
+
+스레드 문제 : start가 무슨 의미인지/ run이 뭘 의미하는지 / 스레드 : start를 호출해야 os가 run을 호출한다.
+join 을 잘 파악하면 된다. 해당 스레드가 자기 일을 수행할때까지 다른스레드가 접근하지 못하게 해당 스레드에게 우선순위를 주는 것. 코드가 어떻게 실행되는지
+하나이상의 스레드가 동시에 접근하거나 공유 : 임계영역 : 해결하기 위해서 어떻게 해야 하는가. 그 개념이 무엇인가.
+스레드 3-4문제
+-------------------
+i/o : 개념..stream 단방향 fifo. 1차스트림.2차.문자.바이트. 등 이론들. 데이터의 자료형까지 저장해주는 스트림
+runnable 인터페이스, colonable 인터페이스. 인터페이스 간의..... 상속 가능
+--------------
+/*시험문제*/
+내부클래스 : 설명.
+블러킹 메서드 : 의미.
+스트링클래스 : 임의테[이블 특징
+split/ stringtokenizer
+네트워크 : inet address class...
+socket 코드 mysocket. 스캐너. printwriter 특징
+자바의 특징
+변수명. 생성자설명중 틀린것. 연산자 결과값. 스태틱메서드가뭐냐. 정보은닉. 강제종료....상속이 불가능한클래스는뭐냐....총40문제
+----------------------------------
+본인 이름. 이메일 적어서 과제 제출
+
+과제
+event-motion-drag
+변수 설정 : 네비게이터에서
+
